@@ -1,0 +1,16 @@
+[package]
+name = "mb-sdk"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+near-sdk = "4.0.0-pre.7"
+
+[dependencies.near_events]
+git = "https://github.com/mintbase/near-events"
+rev = "6d5fe6eef75d2ac5d67ce01d7219c91219a0c7b7"
+
+[features]
+ser = ["near_events/ser"]
+de = ["near_events/de"]
+all = ["ser", "de"]
