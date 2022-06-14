@@ -16,6 +16,7 @@ use near_sdk::{
 use crate::types::mb_market_v01::TokenOffer;
 
 // ----------------------------- create listing ----------------------------- //
+#[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[cfg_attr(feature = "ser", derive(Serialize))]
 #[cfg_attr(feature = "de", derive(Deserialize))]
 #[cfg_attr(

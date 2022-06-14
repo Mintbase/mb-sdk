@@ -8,6 +8,7 @@ use near_sdk::{
     AccountId,
 };
 
+#[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[near_event_data(
     standard = "mb_market",
     version = "0.2.0",
@@ -24,6 +25,7 @@ pub struct NftListData {
     // pub ft_amount: Balance,
 }
 
+#[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[near_event_data(
     standard = "mb_market",
     version = "0.2.0",
