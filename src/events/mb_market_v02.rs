@@ -21,7 +21,7 @@ pub struct NftListData {
     pub nft_owner_id: AccountId,
     pub nft_contract_id: AccountId,
     pub price: U128,
-    // pub ft_contract: AccountId,
+    // pub ft_contract: Option<AccountId>,
     // pub ft_amount: Balance,
 }
 
@@ -55,4 +55,27 @@ pub struct NftSaleLog {
 )]
 pub struct NftSaleData(Vec<NftSaleLog>);
 
-// TODO: NftOfferData
+#[cfg_attr(feature = "all", derive(Clone, Debug))]
+#[near_event_data(
+    standard = "mb_market",
+    version = "0.2.0",
+    event = "nft_make_offer"
+)]
+pub struct NftMakeOfferData {
+    nft_contract: AccountId,
+    token_id: String,
+    offer_id: u64,
+    price: U128,
+}
+
+#[cfg_attr(feature = "all", derive(Clone, Debug))]
+#[near_event_data(
+    standard = "mb_market",
+    version = "0.2.0",
+    event = "nft_withdraw_offer"
+)]
+pub struct NftWithdrawOfferData {
+    nft_contract: AccountId,
+    token_id: String,
+    offer_id: u64,
+}
