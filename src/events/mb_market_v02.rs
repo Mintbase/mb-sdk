@@ -62,10 +62,10 @@ pub struct NftSaleData(Vec<NftSaleLog>);
     event = "nft_make_offer"
 )]
 pub struct NftMakeOfferData {
-    nft_contract: AccountId,
-    token_id: String,
-    offer_id: u64,
-    price: U128,
+    pub nft_contract: AccountId,
+    pub token_id: String,
+    pub offer_id: u64,
+    pub price: U128,
 }
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
@@ -75,7 +75,7 @@ pub struct NftMakeOfferData {
     event = "nft_withdraw_offer"
 )]
 pub struct NftWithdrawOfferData {
-    nft_contract: AccountId,
-    token_id: String,
-    offer_id: u64,
+    pub nft_contract: AccountId,
+    pub token_id: String,
+    pub offer_id: u64,
 }
