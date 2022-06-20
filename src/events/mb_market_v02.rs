@@ -16,10 +16,10 @@ use near_sdk::{
 )]
 pub struct NftListData {
     pub kind: String,
+    pub nft_contract_id: AccountId,
     pub nft_token_ids: Vec<String>,
     pub nft_approval_ids: Vec<u64>,
     pub nft_owner_id: AccountId,
-    pub nft_contract_id: AccountId,
     pub price: U128,
     // pub ft_contract: Option<AccountId>,
     // pub ft_amount: Balance,
@@ -33,7 +33,7 @@ pub struct NftListData {
 )]
 pub struct NftUnlistData {
     pub nft_contract_id: AccountId,
-    pub token_ids: Vec<String>,
+    pub nft_token_ids: Vec<String>,
 }
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
@@ -44,8 +44,8 @@ pub struct NftUnlistData {
     serde(crate = "near_sdk::serde")
 )]
 pub struct NftSaleLog {
-    pub nft_token_id: String,
     pub nft_contract_id: AccountId,
+    pub nft_token_id: String,
 }
 
 #[near_event_data(
@@ -62,8 +62,8 @@ pub struct NftSaleData(Vec<NftSaleLog>);
     event = "nft_make_offer"
 )]
 pub struct NftMakeOfferData {
-    pub nft_contract: AccountId,
-    pub token_id: String,
+    pub nft_contract_id: AccountId,
+    pub nft_token_id: String,
     pub offer_id: u64,
     pub price: U128,
 }
@@ -75,7 +75,7 @@ pub struct NftMakeOfferData {
     event = "nft_withdraw_offer"
 )]
 pub struct NftWithdrawOfferData {
-    pub nft_contract: AccountId,
-    pub token_id: String,
+    pub nft_contract_id: AccountId,
+    pub nft_token_id: String,
     pub offer_id: u64,
 }
