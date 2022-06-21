@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 use near_events::near_event_data;
 #[cfg(feature = "de")]
 use near_sdk::serde::Deserialize;
@@ -37,23 +39,17 @@ pub struct NftUnlistData {
 }
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
-#[cfg_attr(feature = "ser", derive(Serialize))]
-#[cfg_attr(feature = "de", derive(Deserialize))]
-#[cfg_attr(
-    any(feature = "ser", feature = "de"),
-    serde(crate = "near_sdk::serde")
-)]
-pub struct NftSaleLog {
-    pub nft_contract_id: AccountId,
-    pub nft_token_id: String,
-}
-
 #[near_event_data(
     standard = "mb_market",
     version = "0.2.0",
     event = "nft_sale"
 )]
-pub struct NftSaleData(Vec<NftSaleLog>);
+pub struct NftSaleData {
+    pub nft_contract_id: AccountId,
+    pub nft_token_id: String,
+    pub accepted_offer_id: u64,
+    pub payout: HashMap<AccountId, U128>,
+}
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[near_event_data(
