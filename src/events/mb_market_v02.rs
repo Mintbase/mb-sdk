@@ -19,8 +19,8 @@ use near_sdk::{
 pub struct NftListData {
     pub kind: String,
     pub nft_contract_id: AccountId,
-    pub nft_token_ids: Vec<String>,
-    pub nft_approval_ids: Vec<u64>,
+    pub nft_token_id: String,
+    pub nft_approval_id: u64,
     pub nft_owner_id: AccountId,
     pub price: U128,
     // pub ft_contract: Option<AccountId>,
