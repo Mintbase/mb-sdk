@@ -35,7 +35,8 @@ pub struct NftListData {
 )]
 pub struct NftUnlistData {
     pub nft_contract_id: AccountId,
-    pub nft_token_ids: Vec<String>,
+    pub nft_token_id: String,
+    pub nft_approval_id: u64,
 }
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
