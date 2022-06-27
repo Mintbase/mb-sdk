@@ -27,6 +27,8 @@ pub struct NftListData {
     // pub ft_amount: Balance,
 }
 
+// This could be more efficient by vectorizing token IDs and approval IDs, but
+// leads to more code complexity -> do when necessary
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[near_event_data(
     standard = "mb_market",
@@ -48,8 +50,10 @@ pub struct NftUnlistData {
 pub struct NftSaleData {
     pub nft_contract_id: AccountId,
     pub nft_token_id: String,
+    pub nft_approval_id: u64,
     pub accepted_offer_id: u64,
     pub payout: HashMap<AccountId, U128>,
+    pub price: U128,
 }
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
