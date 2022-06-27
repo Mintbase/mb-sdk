@@ -65,6 +65,7 @@ pub struct NftSaleData {
 pub struct NftMakeOfferData {
     pub nft_contract_id: AccountId,
     pub nft_token_id: String,
+    pub nft_approval_id: u64,
     pub offer_id: u64,
     pub price: U128,
 }
