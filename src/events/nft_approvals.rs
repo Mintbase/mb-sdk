@@ -3,11 +3,6 @@ use near_events::near_event_data;
 use near_sdk::serde::Deserialize;
 #[cfg(feature = "ser")]
 use near_sdk::serde::Serialize;
-use near_sdk::{
-    env,
-    json_types::U64,
-    AccountId,
-};
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[cfg_attr(feature = "ser", derive(Serialize))]

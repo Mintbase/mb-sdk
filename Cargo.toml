@@ -8,7 +8,8 @@ near-sdk = "4.0.0-pre.7"
 
 [dependencies.near_events]
 git = "https://github.com/mintbase/near-events"
-rev = "bd78dcaeaa11f6f6286bbbed97d835370783c30b"
+# rev = "bd78dcaeaa11f6f6286bbbed97d835370783c30b"
+rev = "f5e36e02b3bb030b99425b0ec7a46478b0967857"
 
 [features]
 ser = ["near_events/ser"]

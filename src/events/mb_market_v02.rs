@@ -1,10 +1,10 @@
 use std::collections::HashMap;
 
 use near_events::near_event_data;
-#[cfg(feature = "de")]
-use near_sdk::serde::Deserialize;
-#[cfg(feature = "ser")]
-use near_sdk::serde::Serialize;
+// #[cfg(feature = "de")]
+// use near_sdk::serde::Deserialize;
+// #[cfg(feature = "ser")]
+// use near_sdk::serde::Serialize;
 use near_sdk::{
     json_types::U128,
     AccountId,
