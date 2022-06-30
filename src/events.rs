@@ -6,3 +6,4 @@ pub mod mb_market_v02;
 
 pub mod nft_approvals;
 pub mod nft_core;
+pub mod nft_payouts;
