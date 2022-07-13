@@ -54,6 +54,8 @@ pub struct NftSaleData {
     pub accepted_offer_id: u64,
     pub payout: HashMap<AccountId, U128>,
     pub price: U128,
+    pub referrer_id: Option<AccountId>,
+    pub referral_amount: Option<U128>,
 }
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
@@ -68,6 +70,8 @@ pub struct NftMakeOfferData {
     pub nft_approval_id: u64,
     pub offer_id: u64,
     pub price: U128,
+    pub referrer_id: Option<AccountId>,
+    pub referral_amount: Option<U128>,
 }
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
