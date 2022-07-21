@@ -22,9 +22,8 @@ pub struct NftListData {
     pub nft_token_id: String,
     pub nft_approval_id: u64,
     pub nft_owner_id: AccountId,
+    pub currency: String,
     pub price: U128,
-    // pub ft_contract: Option<AccountId>,
-    // pub ft_amount: Balance,
 }
 
 // This could be more efficient by vectorizing token IDs and approval IDs, but
@@ -53,6 +52,7 @@ pub struct NftSaleData {
     pub nft_approval_id: u64,
     pub accepted_offer_id: u64,
     pub payout: HashMap<AccountId, U128>,
+    pub currency: String,
     pub price: U128,
     pub referrer_id: Option<AccountId>,
     pub referral_amount: Option<U128>,
@@ -68,6 +68,7 @@ pub struct NftMakeOfferData {
     pub nft_contract_id: AccountId,
     pub nft_token_id: String,
     pub nft_approval_id: u64,
+    pub currency: String,
     pub offer_id: u64,
     pub price: U128,
     pub referrer_id: Option<AccountId>,
