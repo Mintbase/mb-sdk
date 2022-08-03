@@ -25,7 +25,7 @@ use crate::types::mb_market_v01::TokenOffer;
 )]
 pub struct NftListLog {
     pub list_id: String,
-    pub price: String,
+    pub price: U128,
     pub token_key: String,
     pub owner_id: String,
     pub autotransfer: bool,
