@@ -50,7 +50,7 @@ pub struct NftListData(Vec<NftListLog>);
 pub struct NftUpdateListData {
     pub list_id: String,
     pub auto_transfer: Option<bool>,
-    pub price: Option<String>,
+    pub price: Option<U128>,
 }
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
