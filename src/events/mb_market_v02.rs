@@ -13,7 +13,7 @@ use near_sdk::{
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[near_event_data(
     standard = "mb_market",
-    version = "0.2.0",
+    version = "0.2.1",
     event = "nft_list"
 )]
 pub struct NftListData {
@@ -31,7 +31,7 @@ pub struct NftListData {
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[near_event_data(
     standard = "mb_market",
-    version = "0.2.0",
+    version = "0.2.1",
     event = "nft_unlist"
 )]
 pub struct NftUnlistData {
@@ -43,7 +43,7 @@ pub struct NftUnlistData {
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[near_event_data(
     standard = "mb_market",
-    version = "0.2.0",
+    version = "0.2.1",
     event = "nft_sale"
 )]
 pub struct NftSaleData {
@@ -61,7 +61,7 @@ pub struct NftSaleData {
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[near_event_data(
     standard = "mb_market",
-    version = "0.2.0",
+    version = "0.2.1",
     event = "nft_make_offer"
 )]
 pub struct NftMakeOfferData {
@@ -70,6 +70,7 @@ pub struct NftMakeOfferData {
     pub nft_approval_id: u64,
     pub currency: String,
     pub offer_id: u64,
+    pub offerer_id: AccountId,
     pub price: U128,
     pub referrer_id: Option<AccountId>,
     pub referral_amount: Option<U128>,
@@ -78,7 +79,7 @@ pub struct NftMakeOfferData {
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[near_event_data(
     standard = "mb_market",
-    version = "0.2.0",
+    version = "0.2.1",
     event = "nft_withdraw_offer"
 )]
 pub struct NftWithdrawOfferData {
