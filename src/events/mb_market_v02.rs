@@ -43,7 +43,7 @@ pub struct NftUnlistData {
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[near_event_data(
     standard = "mb_market",
-    version = "0.2.1",
+    version = "0.2.2",
     event = "nft_sale"
 )]
 pub struct NftSaleData {
@@ -56,6 +56,9 @@ pub struct NftSaleData {
     pub price: U128,
     pub referrer_id: Option<AccountId>,
     pub referral_amount: Option<U128>,
+    // this field should always be populated, `Option` for backwards
+    // compatibility of generated JSON
+    pub mintbase_amount: Option<U128>,
 }
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
