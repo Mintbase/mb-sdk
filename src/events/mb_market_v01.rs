@@ -74,6 +74,8 @@ pub struct NftSaleData {
     pub offer_num: u64,
     pub token_key: String,
     pub payout: HashMap<AccountId, U128>,
+    // originally not in 0.1.0, but backwards-comptabile added
+    pub mintbase_amount: Option<U128>,
 }
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
