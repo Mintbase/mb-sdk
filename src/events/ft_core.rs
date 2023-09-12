@@ -2,6 +2,7 @@ use near_events::{
     near_event_data,
     near_event_data_log,
 };
+use near_sdk::json_types::U128;
 
 #[cfg_attr(feature = "all", derive(Clone, Debug))]
 #[near_event_data_log(
@@ -11,7 +12,7 @@ use near_events::{
 )]
 pub struct FtMintLog {
     pub owner_id: String,
-    pub amount: String,
+    pub amount: U128,
     pub memo: Option<String>,
 }
 
@@ -23,7 +24,7 @@ pub struct FtMintLog {
 )]
 pub struct FtBurnLog {
     pub owner_id: String,
-    pub amount: String,
+    pub amount: U128,
     pub memo: Option<String>,
 }
 
@@ -36,6 +37,6 @@ pub struct FtBurnLog {
 pub struct FtTransferLog {
     pub old_owner_id: String,
     pub new_owner_id: String,
-    pub amount: String,
+    pub amount: U128,
     pub memo: Option<String>,
 }
