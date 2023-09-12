@@ -6,6 +6,7 @@ pub mod mb_market_v02;
 
 // standardized
 pub mod nft_core;
+pub mod ft_core;
 
 // non-standardized, related to NFT contract
 pub mod mb_store_settings;
